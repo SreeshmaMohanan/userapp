@@ -1,1 +1,1 @@
-export const serverURL="http://localhost:3031"
+export const serverURL="https://user-server-9rka.onrender.com"

@@ -7,7 +7,7 @@ function Read() {
   const [data, setdata] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3031/users/" + id)
+    axios.get("https://user-server-9rka.onrender.com/users/" + id)
       .then((res) => setdata(res.data))
       .catch((err) => console.log(err.message));
   }, []);

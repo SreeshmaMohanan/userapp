@@ -13,14 +13,14 @@ function Update() {
   const navigate = useNavigate();
 
   useEffect(() => {
-      axios.get('http://localhost:3031/users/'+id)
+      axios.get('https://user-server-9rka.onrender.com/users/'+id)
       .then(res => setInputData(res.data))
       .catch(err => console.log(err))
   }, [])
 
   const handleSubmit = (event) => {
       event.preventDefault();
-      axios.put('http://localhost:3031/users/'+id , inputData)
+      axios.put('https://user-server-9rka.onrender.com/users/'+id , inputData)
       .then(res => {
           console.log(res)
          alert("Data Updated Successfully!")

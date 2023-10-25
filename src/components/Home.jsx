@@ -6,7 +6,7 @@ function Home() {
   const [data, setData] = useState([]);
 
   useEffect(()=> {
-      axios.get('http://localhost:3031/users')
+      axios.get('https://user-server-9rka.onrender.com/users')
       .then(res => setData(res.data))
       .catch(err => console.log(err))
   }, []);
@@ -14,7 +14,7 @@ function Home() {
   const handleDelete = (id) => {
       const confirm = window.confirm("Do you like to Delete?");
       if(confirm) {
-          axios.delete('http://localhost:3031/users/'+id)
+          axios.delete('https://user-server-9rka.onrender.com/users/'+id)
           .then(res => {
               console.log(res.data);
               window.location.reload(true);

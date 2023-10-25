@@ -15,7 +15,7 @@ function Create() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    axios.post("http://localhost:3031/users", inputData).then((res) => {
+    axios.post("https://user-server-9rka.onrender.com/users", inputData).then((res) => {
       alert("Data Posted Successfully!");
       console.log(res.data);
       navigate("/home");
